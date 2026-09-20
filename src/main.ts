@@ -2,7 +2,6 @@ import "./style.css";
 import {
   Agent,
   DEFAULT_MODEL,
-  declarations,
   instructions,
   friendlyError,
   type Event,
@@ -288,7 +287,7 @@ $("settings-form").onsubmit = (e) => {
     $<HTMLInputElement>("custom-model").value ||
     $<HTMLSelectElement>("model").value
   ).trim();
-  if (!nextModel || !/^[a-zA-Z0-9._/:-]+$/.test(nextModel)) {
+  if (!nextModel || !/^[a-zA-Z0-9._~+@/:-]+$/.test(nextModel)) {
     $("settings-message").textContent =
       "Select a model or enter a valid model ID.";
     return;

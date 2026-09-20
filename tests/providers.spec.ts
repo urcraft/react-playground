@@ -40,7 +40,7 @@ for (const provider of ["openai", "anthropic", "openrouter"])
                     ? "gpt-test"
                     : provider === "anthropic"
                       ? "claude-test"
-                      : "vendor/test",
+                      : "~vendor/test",
                 name: "Test model",
                 supported_parameters: ["tools"],
               },
